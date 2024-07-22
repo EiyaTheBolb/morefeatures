@@ -21,6 +21,7 @@ public abstract class SoulDrop extends Entity {
 
 	@Inject(method = "onDeath(Lnet/minecraft/core/entity/Entity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/entity/EntityLiving;dropFewItems()V"))
 	private void soulDrop(Entity entity, CallbackInfo ci){
+	    if (FeaturesItems.soulEnabled == 0) return;
 		if (entity instanceof EntityPlayer){
 			ItemStack heldStack = ((EntityPlayer) entity).getHeldItem();
 			ItemStack drop = new ItemStack(FeaturesItems.mobSoul);

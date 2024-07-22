@@ -13,21 +13,16 @@ import java.util.HashMap;
 
 public class GilderBlock extends Block {
     static public HashMap<Integer, ItemStack> item_map = new HashMap<>();
-    static boolean init = false;
 	public GilderBlock(String key, int id) {
 		super(key, id, Material.metal);
-		init = false;
 	}
 
     @Override
 	public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         // Init the hash map, done now due to init order
-        if (!init) {
-            item_map.put(Item.armorQuiver.id, new ItemStack(Item.armorQuiverGold));
-            if (FeaturesItems.bombQuibersEnabled == 1) {
-                item_map.put(FeaturesItems.bombBag.id, new ItemStack(FeaturesItems.bombBagGold));
-            }
-            init = true;
+        item_map.put(Item.armorQuiver.id, new ItemStack(Item.armorQuiverGold));
+        if (FeaturesItems.bombQuibersEnabled == 1) {
+            item_map.put(FeaturesItems.bombBag.id, new ItemStack(FeaturesItems.bombBagGold));
         }
 
 	    // Check core
@@ -63,7 +58,7 @@ public class GilderBlock extends Block {
 				world.setBlock(x + i, y - 1, z + j, 0);
 			}
 		}
-		world.setBlock(x, y, z, Block.gravel.id);
+		//world.setBlock(x, y, z, Block.gravel.id);
 
 		// Give the item
 		stack.consumeItem(player);

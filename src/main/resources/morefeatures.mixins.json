@@ -8,7 +8,6 @@
     "BlockGrassMixin",
     "ChunkDecoratorOverworldMixin",
     "ColoredGlowstoneAMixin",
-    "EntityBagRender",
     "EntityPlayerMixin",
     "ItemCannonMixin",
     "LabyrinthGenerationMixin",
@@ -18,9 +17,10 @@
     "SpawnerSurvival",
     "WorkbenchFix",
     "ContainerWorkbenchMixin",
-    "RenderEngineMixin"
   ],
   "client": [
+    "EntityBagRender",
+    "RenderEngineMixin"
   ],
   "injectors": {
     "defaultRequire": 1

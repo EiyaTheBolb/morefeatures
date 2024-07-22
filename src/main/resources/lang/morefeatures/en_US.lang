@@ -126,9 +126,9 @@ item.morefeatures.crown.dandeline.desc=Flower crown made with dandelions
 item.morefeatures.crown.rose.name=Rose Crown
 item.morefeatures.crown.rose.desc=Flower crown made with roses
 item.morefeatures.crown.cherry.name=Cherry Crown
-item.morefeatures.crown.cherry.desc=Flower crown made with cherry (pretty hard to make)
+item.morefeatures.crown.cherry.desc=Flower crown made with cherry flowers
 item.morefeatures.crown.deadbush.name=Dead Bush Crown
-item.morefeatures.crown.deadbush.desc=Flower crown made with dead bushes (just...why)
+item.morefeatures.crown.deadbush.desc=Flower crown made with dead bushes (just... why?)
 item.morefeatures.crown.leather.name=Leather Crown
 item.morefeatures.crown.leather.desc=A crown made from cow's hide
 item.morefeatures.crown.chain.name=Chainmail Crown
@@ -208,9 +208,9 @@ item.morefeatures.stick.workbench.name=Workbench On A Stick
 item.morefeatures.stick.workbench.desc=Right click to craft whenever you want!
 
 item.morefeatures.bag.normal.name=Bomb Quiver
-item.morefeatures.bag.normal.desc=Hold your explosive charges in style (not finished)
+item.morefeatures.bag.normal.desc=Hold your explosive charges in style
 item.morefeatures.bag.gold.name=Golden Bomb Quiver
-item.morefeatures.bag.gold.desc=An endless supply of explosive charges (not finished)
+item.morefeatures.bag.gold.desc=An endless supply of explosive charges
 
 item.morefeatures.soul.name=Mob Soul
 item.morefeatures.soul.desc=Not only you can respawn. Mobs can do it too, but not this one anymore. Allows you to change mob inside a spawner ones
