@@ -13,6 +13,7 @@ import net.minecraft.core.item.ItemStack;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 import goocraft4evr.nonamedyes.item.ModItems;
+import luke.bonusblocks.block.BonusBlocks;
 
 
 public class FeaturesCraft implements RecipeEntrypoint {
@@ -24,7 +25,16 @@ public class FeaturesCraft implements RecipeEntrypoint {
 		Block.flowerYellow.id,
 		Block.flowerRed.id,
 		Block.leavesCherryFlowering.id,
-		Block.deadbush.id
+		Block.deadbush.id,
+
+		Block.flowerOrange.id,
+		Block.flowerPink.id,
+		Block.flowerPurple.id,
+		Block.flowerLightBlue.id,
+
+		BonusBlocks.flowerSilver.id,
+		BonusBlocks.flowerCyan.id,
+		BonusBlocks.flowerMagenta.id
 	};
 
 	public static int[] regularMaterial = {
@@ -38,7 +48,16 @@ public class FeaturesCraft implements RecipeEntrypoint {
 		FeaturesItems.dandelionCrown,
 		FeaturesItems.roseCrown,
 		FeaturesItems.cherryCrown,
-		FeaturesItems.deadbushCrown
+		FeaturesItems.deadbushCrown,
+
+        FeaturesItems.orangeCrown,
+        FeaturesItems.pinkCrown,
+        FeaturesItems.purpleCrown,
+        FeaturesItems.lightblueCrown,
+
+        FeaturesItems.lightgrayCrown,
+        FeaturesItems.cyanCrown,
+        FeaturesItems.magentaCrown
 	};
 
 	public static Item[] regularcrownResult = {
@@ -311,7 +330,7 @@ public class FeaturesCraft implements RecipeEntrypoint {
 				RecipeBuilder.Shaped(MOD_ID)
 					.setShape("HHH", "H H", "HHH")
 					.addInput('H', material)
-					.create("rown", new ItemStack(flowercrownResult[j], 1));
+					.create("flower_crown_" + flowercrownResult[j].getTranslatedName(new ItemStack(flowercrownResult[j])), new ItemStack(flowercrownResult[j], 1));
 			}
 		}
 		//regular crown crafting

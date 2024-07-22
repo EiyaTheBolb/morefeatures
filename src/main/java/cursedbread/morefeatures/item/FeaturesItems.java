@@ -11,12 +11,11 @@ import net.minecraft.client.render.stitcher.TextureRegistry;
 
 import static cursedbread.morefeatures.FeaturesMain.MOD_ID;
 
+import java.util.function.Function;
+
 public class FeaturesItems {
 	public static int itemId;
 
-	public static ArmorMaterial dandelionArmor = ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_dandeline", 27, 0f, 0f, 0f, 0f);
-	public static ArmorMaterial roseArmor = ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_rose", 27, 0f, 0f, 0f, 0f);
-	public static ArmorMaterial cherryArmor = ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_cherry", 27, 0f, 0f, 0f, 0f);
 	public static ArmorMaterial deadbushArmor = ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_deadbush", 1, -1000f, -1000f, -1000f, -1000f);
 	public static ArmorMaterial bedrockArmor = ArmorHelper.createArmorMaterial(MOD_ID, "armor_bedrock", 999999999, 999999999f, 999999999f, 999999999f, 999999999f);
 	public static ArmorMaterial bedrockExtraArmor = ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_bedrock_extra", 999999999, 999999999f, 999999999f, 999999999f, 999999999f);
@@ -117,20 +116,32 @@ public class FeaturesItems {
 
 	public static int soulEnabled;
 
+    public static Item cyanCrown;
+    public static Item lightblueCrown;
+    public static Item lightgrayCrown;
+    public static Item magentaCrown;
+    public static Item orangeCrown;
+    public static Item pinkCrown;
+    public static Item purpleCrown;
+
+	public static ArmorMaterial flowerArmor(String str) {
+	    return ArmorHelper.createArmorMaterial(MOD_ID, "extra_armor_flower_" + str, 27, 0f, 0f, 0f, 0f);
+    }
+
 	public void initilizeItems() {
 		//items
 		if (flowerCrownEnabled == 1) {
 			dandelionCrown = new ItemBuilder(MOD_ID)
 			    .setIcon("morefeatures:item/crown_dandeline_helmet")
-			    .build(new ItemArmor("crown.dandeline", itemId++, dandelionArmor, 0));
+			    .build(new ItemArmor("crown.dandeline", itemId++, flowerArmor("dandeline"), 0));
 
 			roseCrown = new ItemBuilder(MOD_ID)
 			    .setIcon("morefeatures:item/crown_rose_helmet")
-			    .build(new ItemArmor("crown.rose", itemId++, roseArmor, 0));
+			    .build(new ItemArmor("crown.rose", itemId++, flowerArmor("rose"), 0));
 
 			cherryCrown = new ItemBuilder(MOD_ID)
 			    .setIcon("morefeatures:item/crown_cherry_helmet")
-			    .build(new ItemArmor("crown.cherry", itemId++, cherryArmor, 0));
+			    .build(new ItemArmor("crown.cherry", itemId++, flowerArmor("cherry"), 0));
 
 			deadbushCrown = new ItemBuilder(MOD_ID)
 			    .setIcon("morefeatures:item/crown_deadbush_helmet")
@@ -322,5 +333,30 @@ public class FeaturesItems {
 			    .setIcon("morefeatures:item/extra_item_soul")
 			    .build(new Item("soul", itemId++));
 		}
+
+ 	    if (flowerCrownEnabled == 1) {
+ 	        // Mo' crowns
+			cyanCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_cyan")
+			    .build(new ItemArmor("crown.cyan", itemId++, flowerArmor("cyan"), 0));
+			lightblueCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_lightblue")
+			    .build(new ItemArmor("crown.lightblue", itemId++, flowerArmor("lightblue"), 0));
+			lightgrayCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_lightgray")
+			    .build(new ItemArmor("crown.lightgray", itemId++, flowerArmor("lightgray"), 0));
+			magentaCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_magenta")
+			    .build(new ItemArmor("crown.magenta", itemId++, flowerArmor("magenta"), 0));
+			orangeCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_orange")
+			    .build(new ItemArmor("crown.orange", itemId++, flowerArmor("orange"), 0));
+			pinkCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_pink")
+			    .build(new ItemArmor("crown.pink", itemId++, flowerArmor("pink"), 0));
+			purpleCrown = new ItemBuilder(MOD_ID)
+			    .setIcon("morefeatures:item/crown_purple")
+			    .build(new ItemArmor("crown.purple", itemId++, flowerArmor("purple"), 0));
+        }
 	}
 }
