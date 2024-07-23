@@ -227,7 +227,7 @@ item.morefeatures.bag.gold.name=Golden Bomb Quiver
 item.morefeatures.bag.gold.desc=An endless supply of explosive charges.
 
 item.morefeatures.soul.name=Mob Soul
-item.morefeatures.soul.desc=You're not the only one that can respawn. Mobs can do it too! but not this one. Allows you to change mob inside a spawner once.
+item.morefeatures.soul.desc=You're not the only one that can respawn! Mobs can do it too, but this one can't anymore. Allows you to change mob inside a spawner once.
 
 tile.morefeatures.gilder.name=Gilding Table
 tile.morefeatures.gilder.desc=Build a golden ring with slate in the middle, put the block on top and right click it with a quiver to cover it with gold.
